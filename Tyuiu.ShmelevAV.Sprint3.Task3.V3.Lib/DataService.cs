@@ -17,7 +17,7 @@ namespace Tyuiu.ShmelevAV.Sprint3.Task3.V3.Lib
                 else
                 {
                     res = Math.Min(res, count);
-                    count = 0;
+                    count = 2;
                 }
             }
             res = Math.Min(res, count);
