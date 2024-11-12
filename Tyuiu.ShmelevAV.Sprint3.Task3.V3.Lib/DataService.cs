@@ -6,6 +6,7 @@ namespace Tyuiu.ShmelevAV.Sprint3.Task3.V3.Lib
     {
         public int GetMinCharCount(string value, char item)
         {
+            int res = 0;
             int count = 0;
             foreach(char chr in value)
             {
@@ -13,7 +14,13 @@ namespace Tyuiu.ShmelevAV.Sprint3.Task3.V3.Lib
                 {
                     count++;
                 }
+                else
+                {
+                    res = Math.Min(res, count);
+                    count = 0;
+                }
             }
+            res = Math.Min(res, count);
             return count;
         }
     }
